@@ -82,9 +82,11 @@ cp -r tech-stack-architect-coach ~/.codex/skills/
 
 ```
 tech-stack-architect-coach/
-├── SKILL.md
 ├── README.md
 ├── LICENSE
+├── skills/
+│   └── tech-stack-architect-coach/
+│       └── SKILL.md
 ├── references/
 │   ├── diagnosis-protocol.md              # 三步诊断 + 技术栈配置采集
 │   ├── module-pool-generation.md          # ★ 任意技术栈的模块池动态生成协议
