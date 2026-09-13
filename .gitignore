@@ -1,0 +1,36 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.tmp
+.idea/
+.vscode/
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+
+# Build artifacts
+target/
+dist/
+build/
+
+# Node
+node_modules/
+
+# Claude Code local settings
+.claude/settings.local.json
+.claude/settings.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Java
+*.class
