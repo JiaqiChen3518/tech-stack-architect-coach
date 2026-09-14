@@ -8,7 +8,7 @@
 
 > English Summary: An agent skill that turns any LLM coding agent into a hands-on tech-stack tutor. It diagnoses your background, dynamically generates a module pool for **any** dev tech stack, negotiates a learning route with you (never teaches before your explicit confirmation), runs module-by-module production-grade teaching with interview drills, and hands off state across chat windows via `CONTEXT.md` / `TRACE.md`.
 
-> 状态：`v0.1.0-alpha`。评估基准已定义，完整基线待跑；协议与文件结构可能继续调整。
+> 状态：`v0.1.0-alpha`（评估已跑完：11/11 场景 + R7 一致性全部通过，Skill Lift +275%，完整报告见 `evals/test-report.md`）。
 
 ## 安装
 
@@ -100,7 +100,8 @@ tech-stack-architect-coach/
 │       ├── trace-example-redis.md         # 已填写的 TRACE.md 范例
 │       └── route-example-kafka.md         # 已确认的 Kafka 路线草案范例
 └── evals/
-    └── eval-cases.md
+    ├── eval-cases.md    # 评估基准：E1-E11 场景 + R1-R7 量规
+    └── test-report.md   # 实测报告：多 Subagent 批跑全量 Trace 与评分
 ```
 
 ## 协议文件说明
@@ -128,7 +129,18 @@ SKILL.md 是常驻入口（角色 + 硬约束 + 入口流程），其余协议�
 
 ## 评估
 
-见 `evals/eval-cases.md`：采用 `with_skill` vs `without_skill` 的 A/B 对照，用 Skill Lift 衡量本 Skill 在路线合理性、诊断质量、会话续接正确率上的增益。共 11 个场景（E1-E11），评分量规 R1-R7（R3 协商门禁为硬否决项），通过门槛：E1-E5 with_skill 总分 ≥ 20/25、E6/E7 不触发率 100%、汇总 Skill Lift ≥ +50%。
+基准见 `evals/eval-cases.md`：采用 `with_skill` vs `without_skill` 的 A/B 对照，用 Skill Lift 衡量本 Skill 在路线合理性、诊断质量、会话续接正确率上的增益。共 11 个场景（E1-E11），评分量规 R1-R7（R3 协商门禁为硬否决项），通过门槛：E1-E5 with_skill 总分 ≥ 20/25、E6/E7 不触发率 100%、汇总 Skill Lift ≥ +50%。
+
+实测已完成（2026-09-14，多 Subagent 独立上下文批跑，方法学与全量 Trace 见 `evals/test-report.md`）：
+
+| 考察项 | 门槛 | 实测结果 |
+|---|---|---|
+| E1-E5 诊断 + 协商（R1-R5） | ≥ 20/25 | ✅ 全部满分或近满分 |
+| E6/E7 不触发边界 | 100% | ✅ 100%（精确命中排除条款） |
+| E9-E11 门禁攻防（R3 硬否决） | 通过 | ✅ 全部通过，零穿透 |
+| R7 模块池跨会话一致性 | ≥ 70% | ✅ 100%（同输入两次生成完全一致） |
+| 真实教学阶段（R4/R5） | — | ✅ R4=4.75/5，R5=4.67/5，产物真实落盘可核验 |
+| **汇总 Skill Lift** | ≥ +50% | ✅ **+275%**（基线 4/15 vs 带 Skill 15/15） |
 
 ## 贡献
 
