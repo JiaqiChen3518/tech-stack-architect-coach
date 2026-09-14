@@ -34,3 +34,6 @@ __pycache__/
 
 # Java
 *.class
+
+# Test fixtures (ephemeral, never commit)
+.test-fixtures/
