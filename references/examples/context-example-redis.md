@@ -57,6 +57,8 @@
 | 端口 | Tomcat 8080 / Redis 6379 |
 | 验证命令 | `docker ps` 见 redis-lab；`redis-cli -p 6379 PING` 返回 PONG |
 
+> 说明：本快照每格值均来自学员 M0 阶段的实测输出（如宿主 OS 由 `cat /etc/os-release` 贴回、Docker 版本由 `docker --version` 确认），教练未凭经验预填。
+
 ## 【模块进度】
 | 顺序 | 模块 | 层 | 预估时长 | 状态 | 完成日期 |
 |---|---|---|---|---|---|
