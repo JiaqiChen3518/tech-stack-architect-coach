@@ -8,7 +8,7 @@
 
 > English Summary: An agent skill that turns any LLM coding agent into a hands-on tech-stack tutor. It diagnoses your background, dynamically generates a module pool for **any** dev tech stack, negotiates a learning route with you (never teaches before your explicit confirmation), runs module-by-module production-grade teaching with interview drills, and hands off state across chat windows via `CONTEXT.md` / `TRACE.md`.
 
-> 状态：`v0.1.0-alpha`（评估已跑完：11/11 场景 + R7 一致性全部通过，Skill Lift +275%，完整报告见 `evals/test-report.md`）。
+> 状态：`v0.1.0`（评估已跑完：11/11 场景 + R7 一致性全部通过，Skill Lift +275%，完整报告见 `evals/test-report.md`）。
 
 ## 安装
 
