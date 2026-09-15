@@ -114,7 +114,7 @@ SKILL.md 是常驻入口（角色 + 硬约束 + 入口流程），其余协议�
 | references/diagnosis-protocol.md | 场景化摸底（不问自评）+ 目标确认 + 偏好采集 + 配置采集 |
 | references/module-pool-generation.md | 为任意开发技术栈动态生成 8-14 个分层模块（★核心创新点；含 Redis/Kafka/MySQL/Vue 四份范例） |
 | references/curriculum-negotiation-protocol.md | 呈现路线草案，学员确认前禁止教学；执行中变更需重新协商 |
-| references/session-management.md | 冷启动五检查 + 显式锚点上下文预警 + 三交付收尾 |
+| references/session-management.md | 冷启动五检查 + 主动收尾触发（5 条件）+ 自旋跳出 + 五要素收尾（含落盘前征询确认） |
 | references/teaching-preferences.md | 把原模板写死的教学约定抽成 8 个可配置项 |
 | references/context-template.md | 跨窗口状态快照载体：14 个固定区段（含【路线决议】防方向跑偏；留痕/术语经【留痕与术语指针】指向 TRACE.md，阶段性全文覆盖） |
 | references/trace-template.md | 追加式 TRACE.md 模板：执行留痕 + 按模块分组的术语表（教学过程中随时追加，不全文重写） |
