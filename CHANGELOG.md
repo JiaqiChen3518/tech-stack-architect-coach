@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Fixed
+
+- 诊断阶段问卷式提问：修复 AI 一次性抛出多个摸底问题导致用户劝退的问题。新增提问节奏硬规则——每轮最多 1 问，固定五维优先级（目标场景 → 现有基础 → 时间预算 → 学习偏好 → 最终交付物），含正反示例与多答兜底条款。
+- `SKILL.md` 新增 §1.4 诊断提问节奏红线（最高优先级）；入口流程与门禁 A 措辞从"三步骤"同步为"五维度"。
+
+### Changed
+
+- `references/diagnosis-protocol.md` 重构：§0 节奏硬规则置顶；摸底题改为梯度题库每轮 1 道；偏好采集由打包提问改为逐项单问（可整组默认跳过）；新增时间预算、最终交付物两个维度；诊断轮次口径由 5-8 轮更新为 8-12 轮。
+- `references/context-template.md` 【学员画像】新增"最终交付物"字段。
+- `evals/eval-cases.md`：R1 量规增加"每轮只问 1 个问题"评分点、轮次上限 8 → 12；E9/E11 考察点措辞与五维度流程对齐（历史报告 `test-report.md` 不改写）。
+
 ## v0.1.0 — 2026-09-14
 
 第一个正式版本：评估完成，去除 alpha 状态。
