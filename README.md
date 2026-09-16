@@ -92,6 +92,7 @@ tech-stack-architect-coach/
 │   ├── module-pool-generation.md          # ★ 任意技术栈的模块池动态生成协议
 │   ├── curriculum-negotiation-protocol.md # 路线草案 + 确认门禁 + 执行中调整
 │   ├── session-management.md              # 冷启动五检查 + 上下文监控 + 收尾
+│   ├── teaching-confirmation-protocol.md  # 讲解确认（讲解≠完成）+ 评估学员思考 + NOTES.md 落盘
 │   ├── teaching-preferences.md            # 教学偏好可配置项定义与默认值
 │   ├── context-template.md                # CONTEXT.md 交接文档模板（阶段性全文覆盖）
 │   ├── trace-template.md                  # TRACE.md 追加式留痕与术语表模板
@@ -115,6 +116,7 @@ SKILL.md 是常驻入口（角色 + 硬约束 + 入口流程），其余协议�
 | references/module-pool-generation.md | 为任意开发技术栈动态生成 8-14 个分层模块（★核心创新点；含 Redis/Kafka/MySQL/Vue 四份范例） |
 | references/curriculum-negotiation-protocol.md | 呈现路线草案，学员确认前禁止教学；执行中变更需重新协商 |
 | references/session-management.md | 冷启动五检查 + 主动收尾触发（5 条件）+ 自旋跳出 + 五要素收尾（含落盘前征询确认） |
+| references/teaching-confirmation-protocol.md | 讲解确认：知识点须学员确认理解才登记"已完成"（讲解≠完成）+ 评估学员思考（不敷衍/不压过）+ 学员好结论落盘 NOTES.md 供复习 |
 | references/teaching-preferences.md | 把原模板写死的教学约定抽成 8 个可配置项 |
 | references/context-template.md | 跨窗口状态快照载体：14 个固定区段（含【路线决议】防方向跑偏；留痕/术语经【留痕与术语指针】指向 TRACE.md，阶段性全文覆盖） |
 | references/trace-template.md | 追加式 TRACE.md 模板：执行留痕 + 按模块分组的术语表（教学过程中随时追加，不全文重写） |
