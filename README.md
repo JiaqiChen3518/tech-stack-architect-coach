@@ -108,7 +108,7 @@ tech-stack-architect-coach/
 
 ## 协议文件说明
 
-SKILL.md 是常驻入口（角色 + 硬约束 + 入口流程），其余协议按教学阶段按需加载（渐进式披露）：
+SKILL.md 是常驻入口（角色 + 硬约束 + 入口流程），其余协议按教学阶段按需加载（渐进式披露）。下表路径均相对于 `skills/tech-stack-architect-coach/`：
 
 | 文件 | 一句话职责 |
 |---|---|
@@ -148,7 +148,7 @@ SKILL.md 是常驻入口（角色 + 硬约束 + 入口流程），其余协议�
 ## 贡献
 
 - 改进协议文件：直接提 PR，注意保持"通用框架"定位——**不要往 Skill 里加具体技术栈的预置教学内容**（模块池是运行时生成的）。
-- 新增技术栈的模块池生成效果不佳时，优先改进 `references/module-pool-generation.md` 的分层规则与范例，而不是加特例。
+- 新增技术栈的模块池生成效果不佳时，优先改进 `skills/tech-stack-architect-coach/references/module-pool-generation.md` 的分层规则与范例，而不是加特例。
 
 ## License
 
