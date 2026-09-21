@@ -20,11 +20,12 @@ npx skills add JiaqiChen3518/tech-stack-architect-coach
 
 ```bash
 # Claude Code 项目级 / 用户级
-cp -r tech-stack-architect-coach /path/to/your-project/.claude/skills/
-cp -r tech-stack-architect-coach ~/.claude/skills/
+# 注意：复制的是 skills/<name>/ 这一层，不是仓库根目录——SKILL.md 与其 references/ 必须同级
+cp -r tech-stack-architect-coach/skills/tech-stack-architect-coach /path/to/your-project/.claude/skills/
+cp -r tech-stack-architect-coach/skills/tech-stack-architect-coach ~/.claude/skills/
 
 # Codex / Cursor / 其他支持 SKILL.md 的平台
-cp -r tech-stack-architect-coach ~/.codex/skills/
+cp -r tech-stack-architect-coach/skills/tech-stack-architect-coach ~/.codex/skills/
 ```
 
 > 本 Skill 的运行时依赖是"一个会读 Markdown 协议的 LLM Agent"，目录结构遵循 Anthropic Agent Skills 规范，任何实现了 frontmatter 触发 + 文件按需读取的平台均可使用。
@@ -85,21 +86,21 @@ tech-stack-architect-coach/
 ├── README.md
 ├── LICENSE
 ├── skills/
-│   └── tech-stack-architect-coach/
-│       └── SKILL.md
-├── references/
-│   ├── diagnosis-protocol.md              # 三步诊断 + 技术栈配置采集
-│   ├── module-pool-generation.md          # ★ 任意技术栈的模块池动态生成协议
-│   ├── curriculum-negotiation-protocol.md # 路线草案 + 确认门禁 + 执行中调整
-│   ├── session-management.md              # 冷启动五检查 + 上下文监控 + 收尾
-│   ├── teaching-confirmation-protocol.md  # 讲解确认（讲解≠完成）+ 评估学员思考 + NOTES.md 落盘
-│   ├── teaching-preferences.md            # 教学偏好可配置项定义与默认值
-│   ├── context-template.md                # CONTEXT.md 交接文档模板（阶段性全文覆盖）
-│   ├── trace-template.md                  # TRACE.md 追加式留痕与术语表模板
-│   └── examples/
-│       ├── context-example-redis.md       # 已填写的 CONTEXT.md 范例
-│       ├── trace-example-redis.md         # 已填写的 TRACE.md 范例
-│       └── route-example-kafka.md         # 已确认的 Kafka 路线草案范例
+│   └── tech-stack-architect-coach/        # ← skills.sh 打包的就是这一层：SKILL.md 与其依赖必须同级
+│       ├── SKILL.md
+│       └── references/
+│           ├── diagnosis-protocol.md              # 三步诊断 + 技术栈配置采集
+│           ├── module-pool-generation.md          # ★ 任意技术栈的模块池动态生成协议
+│           ├── curriculum-negotiation-protocol.md # 路线草案 + 确认门禁 + 执行中调整
+│           ├── session-management.md              # 冷启动五检查 + 上下文监控 + 收尾
+│           ├── teaching-confirmation-protocol.md  # 讲解确认（讲解≠完成）+ 评估学员思考 + NOTES.md 落盘
+│           ├── teaching-preferences.md            # 教学偏好可配置项定义与默认值
+│           ├── context-template.md                # CONTEXT.md 交接文档模板（阶段性全文覆盖）
+│           ├── trace-template.md                  # TRACE.md 追加式留痕与术语表模板
+│           └── examples/
+│               ├── context-example-redis.md       # 已填写的 CONTEXT.md 范例
+│               ├── trace-example-redis.md         # 已填写的 TRACE.md 范例
+│               └── route-example-kafka.md         # 已确认的 Kafka 路线草案范例
 └── evals/
     ├── eval-cases.md    # 评估基准：E1-E11 场景 + R1-R7 量规
     └── test-report.md   # 实测报告：多 Subagent 批跑全量 Trace 与评分

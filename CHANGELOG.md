@@ -12,6 +12,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 
+- **技能安装布局缺陷（`references/` 未随 SKILL.md 打包）**：`skills/<name>/` 目录此前只含 `SKILL.md`，`references/` 留在仓库根目录；而 skills.sh 只打包 `skills/<name>/` 这一层，导致 `npx skills add` 安装后的技能**缺少全部协议文件**（SKILL.md 中 14 处 `references/*.md` 引用全部失效，技能退化为空壳）。修复：将 `references/` 整体移入 `skills/tech-stack-architect-coach/references/`，并同步更新 README 的目录结构图与手动安装命令（`cp -r` 目标由仓库根目录改为 `skills/<name>/` 这一层）。
 - 手动试玩发现的两个环境搭建问题：① 教练靠经验猜学员环境（直接假设虚拟机 IP / 发行版 / 已有软件）；② 教练自己动手把环境搭好（让学员全程旁观）。
 - 执行留痕主语消歧（`SKILL.md` §1.3、`session-management.md` §5）：明确留痕记录的是"学员执行过的"改变状态命令、由教练代记，避免"凡执行过"被读成"教练执行了所以留痕"。
 - `trace-template.md` 模块 0 留痕时机措辞：把"路线确认时一次性补齐"限定到"仅当路线确认前已先行动手"的边缘情形，与"当场记录、禁止等收尾一起补"对齐。
